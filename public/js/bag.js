@@ -7,9 +7,24 @@ const bagContainer = document.querySelector('.cart-content')
 
 const bag = []
 
+const cardItems = [
+  {
+    name: 'Macbook',
+    price: 899,
+    image: './public/assets/imagespexels-dlxmedia-hu-maccbook.png',
+    qty: 1
+  },
+  {
+    name:'Android',
+    price: 399,
+    image: './public/assets/images/andrey-matveev-msartwatch-unsplash.png',
+    qty: 1
+  }
+]
 
-function sendProductToBag(name, price, cardImg) {
 
+function sendProductToBag(event) {
+  const item = cardItems
   for (let i = 0; i < bag.length; i++) {
     if (bag[i].name === name){
       bag[i].qty += 1
@@ -19,13 +34,14 @@ function sendProductToBag(name, price, cardImg) {
 
   
   
-  const item = {
-    name: name,
-    price: price,
-    image: cardImg,
-    qty: 1
-  }
+  // const item = {
+  //   name: name,
+  //   price: price,
+  //   image: cardImg,
+  //   qty: 1
+  // }
   bag.push(item)
+  console.log(item)
 }
 
 
@@ -71,14 +87,15 @@ function displayBag() {
 
 // this event listener listens for when a product card is being clicked on by the item button
   productCards.addEventListener('click', function(event){
+  // for (let i = 0; i < cardImg.length; i++) {
+  //   const cardImg = document.getElementsByClassName('card-image')[0].src  
+  // }
   
-  const cardImg = document.getElementsByClassName('card-image')[0].src
 
-  const name = event.target.dataset.name
-  const price = event.target.dataset.price
-  sendProductToBag(name, price, cardImg)
+  // const name = event.target.dataset.name
+  // const price = event.target.dataset.price
+  sendProductToBag(event)
   addProduct(event)
-  console.log(event.target.dataset.name)
 })
 
 
