@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./public/css/main.css">
+  <title>Tektronics Project</title>
+</head>
+<body>
+  <div class="container">
+
+  <!---- shopping section slide in ---->
+    <div class="shopping-section">
+      <div class="cart-content"></div>
+    </div>
+
+  <!---- header section ---->
+    <header>
+      <h1>Tektronics</h1>
+      <button aria-label="bag-btn" class="bag-btn">
+        <i class="bi bi-bag"></i>
+        <span class="input">0</span>
+      </button>
+    </header>
+  <!---- header section ---->
+
+
+
+  <!---- product-cards ---->
+    <div class="product-cards">
+
+    <!--- product-card-1 --->
+      <article class="product-card">
+        <div class="product-card-content">
+            <img class="card-image" src="./public/assets/images/pexels-dlxmedia-hu-maccbook.png" alt="image of laptop">
+          <div class="card-text-content">
+            <h3>Macbook</h3>
+            <p>$899</p>
+          </div>
+          <div class="btn-content">
+            <button aria-label="item-btn" class="item-btn" data-name="Macbook" data-price="899">Add To Bag</button>
+          </div>
+        </div>
+      </article>
+     <!--- product-card-1 --->
+
+
+
+    <!--- product-card-2 --->
+      <article class="product-card">
+        <div class="product-card-content">
+            <img class="card-image" src="./public/assets/images/andrey-matveev-msartwatch-unsplash.png" alt="image of smartwatch">
+          <div class="card-text-content">
+            <h3>Android</h3>
+            <p>$399</p>
+          </div>
+          <div class="btn-content">
+            <button aria-label="item-btn" class="item-btn" data-name="Android" data-price="399">Add To Bag</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    </div>
+  </div>
+  <script src="./public/js/bag.js"></script>
+</body>
+</html>

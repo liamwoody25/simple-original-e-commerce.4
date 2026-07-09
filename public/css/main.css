@@ -1,0 +1,191 @@
+/***** components *****/
+
+
+/**** bag btn ****/
+
+.bag-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.bi-bag {
+  font-size: 24px;
+}
+
+.input {
+  font-size: 13px;
+  position: relative;
+  right: 19px;
+  bottom: 1px;
+}
+
+/**** bag btn ****/
+
+
+
+/**** product btn content ****/
+
+.item-btn {
+  padding: 7px 10px;
+  box-shadow: 0 1px 6px -4px black;
+}
+
+
+.quantity-btn-content {
+  background-color: #89c2d9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.decrease-btn,
+.increase-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.bi-dash-square,
+.bi-plus-square {
+  color: #fff;
+}
+
+
+/***** components *****/
+
+
+
+/**** body ****/
+
+.container {
+  margin: 0 auto;
+  width: 92%;
+}
+
+/**** body ****/
+
+
+
+/**** header ****/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: relative;
+  z-index: 1;
+}
+
+/**** header ****/
+
+
+
+
+/**** shopping section ****/
+
+.cart-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  gap: 20px;
+}
+
+.shopping-section {
+  position: fixed;
+  right: -455px;
+  width: 373px;
+  height: 685px;
+  transition-property: right;
+  background-color: grey;
+  transition-timing-function: ease-in-out;
+  transition-duration: .9s;
+}
+
+.shopping-section.enable {
+  right: 0;
+}
+
+/*** bag-product-card ***/
+
+.bag-product-card {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  background-color: #669bbc;
+  border-radius: 15px;
+}
+
+.item-card-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product-content-container {
+  text-align: center;
+}
+
+.bag-item-image {
+  width: 35%;
+  background-color: #edede9;
+  border-radius: 10px 0 0 10px;
+}
+
+
+
+/*** bag-product-card ***/
+
+
+
+/**** product section ****/
+
+.product-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  width: 80%;
+  box-shadow: 0 6px 14px -8px black;
+}
+
+.product-card-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-text-content {
+  text-align: center;
+  padding: 0;
+}
+
+.card-text-content > h3 {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.card-text-content > p {
+  margin: 7px 0 7px;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: #edede9;
+}
+
+/**** product section ****/
+
+
+
+
+
