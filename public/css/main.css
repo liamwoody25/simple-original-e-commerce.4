@@ -154,6 +154,7 @@ header {
 .product-card {
   width: 80%;
   box-shadow: 0 6px 14px -8px black;
+  border-radius: 10px
 }
 
 .product-card-content {
