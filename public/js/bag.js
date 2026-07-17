@@ -8,7 +8,15 @@ const bag = []
 
 
 function sendProductToBag(name, price, image) {
+  const bagOutput = document.getElementById('bag-output');
+  const displayQuantity = Number(bagOutput.innerText) + 1
  
+  if (displayQuantity > 10) {
+    displayQuantity = 0
+  }
+
+  bagOutput.innerText = displayQuantity
+
   for (let i = 0; i < bag.length; i+= 1) {
     if (bag[i].name === name) {
       bag[i].qty += 1
@@ -20,7 +28,7 @@ function sendProductToBag(name, price, image) {
       name: name,
       price: price,
       image: image,
-      qty: 0
+      qty: 1
     }
   
   bag.push(item)  
@@ -67,6 +75,9 @@ function displayBag() {
   }
 }
 
+
+
+// this code is for when the add to bag button is clicked
 for (let i = 0; i < productBtn.length; i+= 1) {
   productBtn[i].addEventListener('click', function(){
   const cardImg = document.querySelectorAll('.card-image')[i].src
@@ -79,6 +90,7 @@ for (let i = 0; i < productBtn.length; i+= 1) {
 
 
 
+// this event listner is to listen for the user clicks on the bag icon
 bagBtn.addEventListener('click', function(){
   displayBag()
 })
