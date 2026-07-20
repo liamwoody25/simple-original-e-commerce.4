@@ -59,6 +59,8 @@ function addProduct() {
     `
   }
 
+  
+
   bagContainer.innerHTML = product
 }
 
@@ -94,6 +96,7 @@ for (let i = 0; i < productBtn.length; i+= 1) {
   updateBag()
 })
 }
+
 
 
 
