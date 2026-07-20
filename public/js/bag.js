@@ -2,6 +2,7 @@ const bagBtn = document.querySelector('.bi-bag')
 const bagOffScreen = document.querySelector('.shopping-section');
 const productBtn = document.querySelectorAll('.item-btn');
 const bagContainer = document.querySelector('.cart-content')
+const priceContent = document.querySelector('.bag-price-container')
 
 const bag = []
 
@@ -61,7 +62,12 @@ function addProduct() {
   bagContainer.innerHTML = product
 }
 
+function updateBag() {
+  priceContent.innerHTML = ''
 
+
+  priceContent.style.display = 'block'
+}
 
 
 
@@ -85,6 +91,7 @@ for (let i = 0; i < productBtn.length; i+= 1) {
   const price = productBtn[i].dataset.price
   sendProductToBag(name, price, cardImg)
   addProduct()
+  updateBag()
 })
 }
 

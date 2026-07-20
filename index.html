@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./public/css/main.css">
   <title>Tektronics Project</title>
 </head>
@@ -12,7 +15,10 @@
 
   <!---- shopping section slide in ---->
     <div class="shopping-section">
-      <div class="cart-content"></div>
+      <div class="cart-content">
+        <div class="bag-price-container"></div>
+      </div>
+      
     </div>
 
   <!---- header section ---->
@@ -30,7 +36,7 @@
   <!---- product-cards ---->
     <div class="product-cards">
 
-      
+
 
     <!--- product-card-1 --->
       <article class="product-card">
@@ -73,18 +79,34 @@
           <div class="card-text-content">
             <h3>Iphone</h3>
             <p>$699</p>
-          <div class="btn-content">
-              <button aria-label="item-btn" class="item-btn" data-name="Iphone" data-price="699">Add To Bag</button>
           </div>
+          <div class="btn-content">
+            <button aria-label="item-btn" class="item-btn" data-name="Iphone" data-price="699">Add To Bag</button>
           </div>
         </div>
       </article>
     <!--- product-card-3 --->
 
+
+
+    <!--- product-card-4 --->
+      <article class="product-card">
+        <div class="product-card-content">
+            <img class="card-image" src="./public/assets/images/pexels-cottonbro-headphones-jpg.jpg" alt="image of headphones">
+          <div class="card-text-content">
+            <h3>Headset</h3>
+            <p>$250</p>
+          </div>
+          <div class="btn-content">
+            <button aria-label="item-btn" class="item-btn" data-name="Headset" data-price="250">Add To Bag</button>
+          </div>
+        </div>
+      </article>
+    <!--- product-card-4 --->
+
     </div>
 
     </div>
-  </div>
   <script src="./public/js/bag.js"></script>
 </body>
 </html>
