@@ -4,6 +4,7 @@ const productBtn = document.querySelectorAll('.item-btn');
 const bagContainer = document.querySelector('.cart-content')
 const priceContent = document.querySelector('.bag-price-container')
 
+
 const bag = []
 
 
@@ -38,6 +39,7 @@ function sendProductToBag(name, price, image) {
 
 
 function addProduct() {
+ 
   let product = ''
 
   for (let i = 0; i < bag.length; i++) {
@@ -47,7 +49,7 @@ function addProduct() {
             <img class="bag-item-image" src="${bag[i].image}">
           <div class="product-content-container">
             <h3>${bag[i].name}</h3>
-            <p>${bag[i].price}</p>
+            <p>$ ${bag[i].price}</p>
           </div>
           <div class="quantity-btn-content">
             <button aria-lable="decrease-btn" class="decrease-btn"><i class="bi bi-dash-square"></i></button>
@@ -60,15 +62,41 @@ function addProduct() {
   }
 
   
+  
+  
 
   bagContainer.innerHTML = product
 }
 
+
+
+// this function code is for when the bag is being updated
 function updateBag() {
-  priceContent.innerHTML = ''
+  const decreaseBtn = document.querySelectorAll('.decrease-btn');
+  const increaseBtn = document.querySelector('.increase-btn');
+
+  for (let i = 0; i < bag.length; i+= 1) {
+     decreaseBtn[i].addEventListener('click', function(){
+      let productOutput = document.querySelectorAll('.card-output')[i]
+      let quantityOutput = Number(productOutput.innerText) - 1
+
+      if (quantityOutput < 0) {
+        quantityOutput = 0
+      }
+
+      productOutput.innerText = quantityOutput
+      document.getElementById('bag-output').textContent -= 1
+  })
+  }
+
+  increaseBtn.addEventListener('click', function(){
+    console.log('this button works')
+  })
+  
+  // priceContent.innerHTML = ''
 
 
-  priceContent.style.display = 'block'
+  // priceContent.style.display = 'block'
 }
 
 
@@ -96,6 +124,9 @@ for (let i = 0; i < productBtn.length; i+= 1) {
   updateBag()
 })
 }
+
+
+
 
 
 
