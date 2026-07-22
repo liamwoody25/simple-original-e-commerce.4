@@ -73,11 +73,13 @@ function addProduct() {
 // this function code is for when the bag is being updated
 function updateBag() {
   const decreaseBtn = document.querySelectorAll('.decrease-btn');
-  const increaseBtn = document.querySelector('.increase-btn');
+  const increaseBtn = document.querySelectorAll('.increase-btn');
 
-  for (let i = 0; i < bag.length; i+= 1) {
+
+// this code is to loop through every decrease button
+  for (let i = 0; i < decreaseBtn.length; i+= 1) {
      decreaseBtn[i].addEventListener('click', function(){
-      let productOutput = document.querySelectorAll('.card-output')[i]
+      const productOutput = document.querySelectorAll('.card-output')[i]
       let quantityOutput = Number(productOutput.innerText) - 1
 
       if (quantityOutput < 0) {
@@ -85,13 +87,27 @@ function updateBag() {
       }
 
       productOutput.innerText = quantityOutput
+
       document.getElementById('bag-output').textContent -= 1
   })
   }
 
-  increaseBtn.addEventListener('click', function(){
-    console.log('this button works')
-  })
+  
+// this code is to loop through each increase button
+  for (let i = 0; i < increaseBtn.length; i+= 1) {
+    increaseBtn[i].addEventListener('click', function(){
+      const productOutput = document.querySelectorAll('.card-output')[i]
+      let quantityOutput = Number(productOutput.innerText) + 1
+
+      if (quantityOutput > 10) {
+        quantityOutput = 0
+      }
+
+      productOutput.innerText = quantityOutput
+      document.getElementById('bag-output').textContent = quantityOutput
+    })
+  }
+  
   
   // priceContent.innerHTML = ''
 
