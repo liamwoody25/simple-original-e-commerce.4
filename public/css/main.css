@@ -126,7 +126,7 @@ header {
   background-color: #669bbc;
   width: 80%;
   border-radius: 15px;
-  display: block;
+  display: none;
 }
 
 .sub-text-container {
@@ -134,6 +134,15 @@ header {
 }
 
 .sub-text-container > p {
+  color: aliceblue;
+}
+
+.shipping-content {
+  display: flex;
+}
+
+.shipping-content > h3 {
+  margin: 0;
   color: aliceblue;
 }
 

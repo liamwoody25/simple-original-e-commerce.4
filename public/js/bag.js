@@ -62,10 +62,6 @@ function addProduct() {
     `
   }
 
-  
-  
-  
-
   bagContainer.innerHTML = product
 }
 
@@ -78,12 +74,11 @@ function updateBag() {
   const decreaseBtn = document.querySelectorAll('.decrease-btn');
   const increaseBtn = document.querySelectorAll('.increase-btn');
 
-  priceContent.innerHTML = ''
 
 // this code is to loop through every decrease button
   for (let i = 0; i < decreaseBtn.length; i+= 1) {
      decreaseBtn[i].addEventListener('click', function(){
-      const productOutput = document.querySelectorAll('.card-output')[i]
+      let productOutput = document.querySelectorAll('.card-output')[i]
       let quantityOutput = Number(productOutput.innerText) - 1
 
       if (quantityOutput < 0) {
@@ -93,10 +88,13 @@ function updateBag() {
       productOutput.innerText = quantityOutput
 
       document.getElementById('bag-output').textContent -= 1
+
+       
     })
   }
 
-  
+ 
+
 
 // this code is to loop through each increase button
   for (let i = 0; i < increaseBtn.length; i+= 1) {
@@ -115,7 +113,7 @@ function updateBag() {
   }
   
 
-
+  priceContent.innerHTML = ''
   
   const totalContent = document.createElement('div');
   totalContent.classList.add('bag-price-content');
@@ -123,12 +121,26 @@ function updateBag() {
   const subContent = document.createElement('div');
   subContent.classList.add('sub-text-container');
 
-  const subTotalPrice = document.createElement('p'); 
+  const subTotalPrice = document.createElement('p');
   subTotalPrice.textContent = 'sub Total'
+
+  const shipContent = document.createElement('div');
+  shipContent.classList.add('shipping-content');
+
+  const priceHd = document.createElement('h3');
+  priceHd.textContent = 'delivery'
   
+
+  shipContent.append(priceHd)
   subContent.append(subTotalPrice)
-  totalContent.append(subContent)
-  priceContent.append(totalContent)
+  totalContent.append(subContent, shipContent)
+  priceContent.appendChild(totalContent)
+
+
+  
+  priceContent.style.display = 'block'
+
+  
   
 
   //  priceContent.innerHTML = `
@@ -138,7 +150,9 @@ function updateBag() {
   //     </div>
   //   </div>
   // `
-  // priceContent.style.display = 'block'
+
+  
+  
 }
 
 
