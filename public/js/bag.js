@@ -5,6 +5,7 @@ const bagContainer = document.querySelector('.cart-content')
 const priceContent = document.querySelector('.bag-price-container')
 
 
+
 const bag = []
 
 
@@ -72,9 +73,12 @@ function addProduct() {
 
 // this function code is for when the bag is being updated
 function updateBag() {
+  // let 
+  
   const decreaseBtn = document.querySelectorAll('.decrease-btn');
   const increaseBtn = document.querySelectorAll('.increase-btn');
 
+  priceContent.innerHTML = ''
 
 // this code is to loop through every decrease button
   for (let i = 0; i < decreaseBtn.length; i+= 1) {
@@ -89,12 +93,14 @@ function updateBag() {
       productOutput.innerText = quantityOutput
 
       document.getElementById('bag-output').textContent -= 1
-  })
+    })
   }
 
   
+
 // this code is to loop through each increase button
   for (let i = 0; i < increaseBtn.length; i+= 1) {
+
     increaseBtn[i].addEventListener('click', function(){
       const productOutput = document.querySelectorAll('.card-output')[i]
       let quantityOutput = Number(productOutput.innerText) + 1
@@ -108,10 +114,30 @@ function updateBag() {
     })
   }
   
+
+
   
-  // priceContent.innerHTML = ''
+  const totalContent = document.createElement('div');
+  totalContent.classList.add('bag-price-content');
 
+  const subContent = document.createElement('div');
+  subContent.classList.add('sub-text-container');
 
+  const subTotalPrice = document.createElement('p'); 
+  subTotalPrice.textContent = 'sub Total'
+  
+  subContent.append(subTotalPrice)
+  totalContent.append(subContent)
+  priceContent.append(totalContent)
+  
+
+  //  priceContent.innerHTML = `
+  //   <div class="bag-price-content">
+  //     <div class="sub-text-container">
+  //       <p>Sub Total</p>
+  //     </div>
+  //   </div>
+  // `
   // priceContent.style.display = 'block'
 }
 
@@ -132,17 +158,15 @@ function displayBag() {
 // this code is for when the add to bag button is clicked
 for (let i = 0; i < productBtn.length; i+= 1) {
   productBtn[i].addEventListener('click', function(){
-  const cardImg = document.querySelectorAll('.card-image')[i].src
-  const name = productBtn[i].dataset.name
-  const price = productBtn[i].dataset.price
-  sendProductToBag(name, price, cardImg)
-  addProduct()
-  updateBag()
-})
+
+    const cardImg = document.querySelectorAll('.card-image')[i].src
+    const name = productBtn[i].dataset.name
+    const price = productBtn[i].dataset.price
+    sendProductToBag(name, price, cardImg)
+    addProduct()
+    updateBag()
+  })
 }
-
-
-
 
 
 

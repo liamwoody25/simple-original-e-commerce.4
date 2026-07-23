@@ -126,7 +126,15 @@ header {
   background-color: #669bbc;
   width: 80%;
   border-radius: 15px;
-  display: none;
+  display: block;
+}
+
+.sub-text-container {
+  display: flex;
+}
+
+.sub-text-container > p {
+  color: aliceblue;
 }
 
 .shopping-section {
