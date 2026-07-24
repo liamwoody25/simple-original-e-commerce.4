@@ -35,6 +35,7 @@ function sendProductToBag(name, price, image) {
     }
   
   bag.push(item)  
+  updateBag()
 }
 
 
@@ -63,17 +64,23 @@ function addProduct() {
   }
 
   bagContainer.innerHTML = product
+
+  
 }
 
 
 
 // this function code is for when the bag is being updated
 function updateBag() {
-  // let 
-  
+  let total = 0
   const decreaseBtn = document.querySelectorAll('.decrease-btn');
   const increaseBtn = document.querySelectorAll('.increase-btn');
+  
+  for (let i = 0; i < bag.length; i+= 1) {
+   total += bag[i].price * bag[i].qty    
+  }
 
+ 
 
 // this code is to loop through every decrease button
   for (let i = 0; i < decreaseBtn.length; i+= 1) {
@@ -88,14 +95,10 @@ function updateBag() {
       productOutput.innerText = quantityOutput
 
       document.getElementById('bag-output').textContent -= 1
-
-       
     })
   }
 
  
-
-
 // this code is to loop through each increase button
   for (let i = 0; i < increaseBtn.length; i+= 1) {
 
@@ -111,48 +114,61 @@ function updateBag() {
       document.getElementById('bag-output').textContent = quantityOutput
     })
   }
-  
 
-  priceContent.innerHTML = ''
-  
-  const totalContent = document.createElement('div');
-  totalContent.classList.add('bag-price-content');
+  for (let i = 0; i < bag.length; i+= 1) {
 
-  const subContent = document.createElement('div');
-  subContent.classList.add('sub-text-container');
+   
+    priceContent.innerHTML = ''
+    
+    // this code is creates the content of the sub total price
+    const totalContent = document.createElement('div');
+    totalContent.classList.add('bag-price-content');
 
-  const subTotalPrice = document.createElement('p');
-  subTotalPrice.textContent = 'sub Total'
+    const subContent = document.createElement('div');
+    subContent.classList.add('sub-text-container');
 
-  const shipContent = document.createElement('div');
-  shipContent.classList.add('shipping-content');
+    const subTotalPrice = document.createElement('p');
+    subTotalPrice.textContent = 'sub Total'
 
-  const priceHd = document.createElement('h3');
-  priceHd.textContent = 'delivery'
-  
-
-  shipContent.append(priceHd)
-  subContent.append(subTotalPrice)
-  totalContent.append(subContent, shipContent)
-  priceContent.appendChild(totalContent)
+    const subPrice = document.createElement('p');
+    subPrice.textContent = `${bag[i].price}`
 
 
-  
-  priceContent.style.display = 'block'
 
-  
-  
+    // this code creates the shipping content for shipping text
+    const shipContent = document.createElement('div');
+    shipContent.classList.add('shipping-content');
 
-  //  priceContent.innerHTML = `
-  //   <div class="bag-price-content">
-  //     <div class="sub-text-container">
-  //       <p>Sub Total</p>
-  //     </div>
-  //   </div>
-  // `
+    const priceHd = document.createElement('h4');
+    priceHd.textContent = 'delivery'
+
+    const shipText = document.createElement('p');
+    shipText.textContent = 'Free'
+    
 
   
+    // these codes create the total container for the total text
+    const fullContent = document.createElement('div');
+    fullContent.classList.add('total-container');
+
+    const totalPriceHd = document.createElement('h4');
+    totalPriceHd.textContent = 'Total'
+
+    const priceTotal = document.createElement('p');
+    priceTotal.innerHTML = `$${total}`
+
+
+    fullContent.append(totalPriceHd, priceTotal)
+    shipContent.append(priceHd, shipText)
+    subContent.append(subTotalPrice, subPrice)
+    totalContent.append(subContent, shipContent, fullContent)
+    priceContent.appendChild(totalContent)
+
+   }
+
   
+
+    priceContent.style.display = 'block'
 }
 
 

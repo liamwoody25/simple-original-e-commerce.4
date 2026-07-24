@@ -16,6 +16,11 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  color: aliceblue;
+  margin: 5px 0;
+}
+
 p {
   font-size: 16px;
 }
@@ -121,31 +126,6 @@ header {
   gap: 20px;
 }
 
-.bag-price-container {
-  padding: 20px;
-  background-color: #669bbc;
-  width: 80%;
-  border-radius: 15px;
-  display: none;
-}
-
-.sub-text-container {
-  display: flex;
-}
-
-.sub-text-container > p {
-  color: aliceblue;
-}
-
-.shipping-content {
-  display: flex;
-}
-
-.shipping-content > h3 {
-  margin: 0;
-  color: aliceblue;
-}
-
 .shopping-section {
   position: fixed;
   right: -455px;
@@ -160,6 +140,62 @@ header {
 .shopping-section.enable {
   right: 0;
 }
+
+
+.bag-price-container {
+  padding: 20px;
+  background-color: #669bbc;
+  width: 76%;
+  border-radius: 15px;
+  display: none;
+  justify-content: space-around;
+  position: relative;
+  left: 24px;
+}
+
+.sub-text-container {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.sub-text-container > p {
+  color: aliceblue;
+  margin: 5px 0;
+}
+
+/*** shipping-content ***/
+
+.shipping-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipping-content > h3 {
+  margin: 0;
+  color: aliceblue;
+}
+
+.shipping-content > p {
+  color: aliceblue;
+  margin: 5px 0;
+}
+
+/*** total-container ***/
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-container > p {
+  color: aliceblue;
+  margin: 5px 0;
+}
+
+/*** total-container ***/
+
+
 
 /*** bag-product-card ***/
 
@@ -187,8 +223,6 @@ header {
   background-color: #edede9;
   border-radius: 10px 0 0 10px;
 }
-
-
 
 /*** bag-product-card ***/
 
