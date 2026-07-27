@@ -35,7 +35,7 @@ function sendProductToBag(name, price, image) {
     }
   
   bag.push(item)  
-  updateBag()
+
 }
 
 
@@ -51,7 +51,7 @@ function addProduct() {
             <img class="bag-item-image" src="${bag[i].image}">
           <div class="product-content-container">
             <h3>${bag[i].name}</h3>
-            <p>$ ${bag[i].price}</p>
+            <p>$ ${bag[i].price} x ${bag[i].qty}</p>
           </div>
           <div class="quantity-btn-content">
             <button aria-lable="decrease-btn" class="decrease-btn"><i class="bi bi-dash-square"></i></button>
@@ -64,9 +64,9 @@ function addProduct() {
   }
 
   bagContainer.innerHTML = product
-
-  
+  updateBag()
 }
+
 
 
 
@@ -85,8 +85,9 @@ function updateBag() {
 // this code is to loop through every decrease button
   for (let i = 0; i < decreaseBtn.length; i+= 1) {
      decreaseBtn[i].addEventListener('click', function(){
-      let productOutput = document.querySelectorAll('.card-output')[i]
-      let quantityOutput = Number(productOutput.innerText) - 1
+      let total = 0
+      const productOutput = document.querySelectorAll('.card-output')[i]
+      let quantityOutput  = Number(productOutput.innerText) - 1
 
       if (quantityOutput < 0) {
         quantityOutput = 0
@@ -94,7 +95,7 @@ function updateBag() {
 
       productOutput.innerText = quantityOutput
 
-      document.getElementById('bag-output').textContent -= 1
+      document.getElementById('bag-output').textContent = quantityOutput
     })
   }
 
@@ -106,12 +107,14 @@ function updateBag() {
       const productOutput = document.querySelectorAll('.card-output')[i]
       let quantityOutput = Number(productOutput.innerText) + 1
 
-      if (quantityOutput > 10) {
-        quantityOutput = 0
+      if (quantityOutput > bag[i].qty ++ ) {
+        quantityOutput = bag[i].qty ++
       }
 
       productOutput.innerText = quantityOutput
       document.getElementById('bag-output').textContent = quantityOutput
+
+     
     })
   }
 
@@ -127,11 +130,11 @@ function updateBag() {
     const subContent = document.createElement('div');
     subContent.classList.add('sub-text-container');
 
-    const subTotalPrice = document.createElement('p');
+    const subTotalPrice = document.createElement('h4');
     subTotalPrice.textContent = 'sub Total'
 
     const subPrice = document.createElement('p');
-    subPrice.textContent = `${bag[i].price}`
+    subPrice.textContent = `$${bag[i].price} x ${bag[i].qty}`
 
 
 
@@ -163,7 +166,6 @@ function updateBag() {
     subContent.append(subTotalPrice, subPrice)
     totalContent.append(subContent, shipContent, fullContent)
     priceContent.appendChild(totalContent)
-
    }
 
   
@@ -194,7 +196,7 @@ for (let i = 0; i < productBtn.length; i+= 1) {
     const price = productBtn[i].dataset.price
     sendProductToBag(name, price, cardImg)
     addProduct()
-    updateBag()
+    // updateBag()
   })
 }
 
