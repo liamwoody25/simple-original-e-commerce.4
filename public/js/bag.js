@@ -54,7 +54,7 @@ function addProduct() {
             <img class="bag-item-image" src="${bag[i].image}">
           <div class="product-content-container">
             <h3>${bag[i].name}</h3>
-            <p>$ ${bag[i].price} x ${bag[i].qty}</p>
+            <p>$ ${bag[i].price}</p>
           </div>
           <div class="quantity-btn-content">
             <button aria-lable="decrease-btn" class="decrease-btn"><i class="bi bi-dash-square"></i></button>
@@ -79,11 +79,12 @@ function addProduct() {
         let quantityOutput = Number(productOutput.innerText) + 1
 
    
-
+      // this code is for when the user wants to increase the product quantity
         if (quantityOutput = bag[i].qty ++ ) {
-            quantityOutput = bag[i].qty
+          quantityOutput = bag[i].qty
         }
       
+
 
       productOutput.innerText = quantityOutput
       document.getElementById('bag-output').textContent = quantityOutput
@@ -93,7 +94,6 @@ function addProduct() {
    
   }
    
-
  updateBag()
   
 }
@@ -112,15 +112,6 @@ function updateBag() {
 
 
 
-
-    
-  
-
-  
-  
-
-
- 
 
 
   for (let i = 0; i < bag.length; i+= 1) {
@@ -165,13 +156,22 @@ function updateBag() {
     priceTotal.innerHTML = `$${total}`
 
 
+
+    // these code displays the price content inside the price container
     fullContent.append(totalPriceHd, priceTotal)
     shipContent.append(priceHd, shipText)
     subContent.append(subTotalPrice, subPrice)
     totalContent.append(subContent, shipContent, fullContent)
     priceContent.appendChild(totalContent)
    }
+   if (total === 0) {
+    priceContent.style.display = 'none'
+   } else {
     priceContent.style.display = 'block'
+   }
+   
+  
+
 }
 
 
@@ -186,13 +186,17 @@ function removeProductFromBag() {
         const productOutput = document.querySelectorAll('.card-output')[i]
         let quantityOutput  = Number(productOutput.innerText) - 1
 
+    // this code is for when the user wants to remove a product quantity
       if (quantityOutput = bag[i].qty -- ) {
         quantityOutput = bag[i].qty 
       }
 
+
         productOutput.innerText = quantityOutput
 
         document.getElementById('bag-output').textContent = quantityOutput
+
+        
       updateBag()
     })
   }
@@ -232,7 +236,6 @@ for (let i = 0; i < productBtn.length; i+= 1) {
 
 
 
-
 // this event listner is to listen for the user clicks on the bag icon
 bagBtn.addEventListener('click', function(){
   displayBag()
@@ -250,15 +253,4 @@ bagBtn.addEventListener('click', function(){
 
 
 
-
-
-
-  //   let total = 0
-  
-
-  
-
-  //  for (let i = 0; i < bag.length; i+= 1) {
-  //  total += bag[i].price * bag[i].qty    
-  // }
 
