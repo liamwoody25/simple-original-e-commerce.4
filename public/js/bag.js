@@ -6,6 +6,7 @@ const priceContent = document.querySelector('.bag-price-container')
 
 
 
+
 const bag = []
 
 
@@ -42,6 +43,8 @@ function sendProductToBag(name, price, image) {
 
 function addProduct() {
  
+  
+ 
   let product = ''
 
   for (let i = 0; i < bag.length; i++) {
@@ -64,7 +67,35 @@ function addProduct() {
   }
 
   bagContainer.innerHTML = product
-  updateBag()
+
+
+  const increaseBtn = document.querySelectorAll('.increase-btn');
+
+
+    // this code is to loop through each increase button 
+    for (let i = 0; i < increaseBtn.length; i+= 1) {
+      increaseBtn[i].addEventListener('click', function(){
+        const productOutput = document.querySelectorAll('.card-output')[i]
+        let quantityOutput = Number(productOutput.innerText) + 1
+
+   
+
+        if (quantityOutput = bag[i].qty ++ ) {
+            quantityOutput = bag[i].qty
+        }
+      
+
+      productOutput.innerText = quantityOutput
+      document.getElementById('bag-output').textContent = quantityOutput
+      
+     updateBag()
+    })
+   
+  }
+   
+
+ updateBag()
+  
 }
 
 
@@ -72,54 +103,27 @@ function addProduct() {
 
 // this function code is for when the bag is being updated
 function updateBag() {
-  let total = 0
-  const decreaseBtn = document.querySelectorAll('.decrease-btn');
-  const increaseBtn = document.querySelectorAll('.increase-btn');
+
+    let total = 0
+
+    for (let i = 0; i < bag.length; i+= 1) {
+    total += bag[i].price * bag[i].qty
+    }
+
+
+
+
+    
   
-  for (let i = 0; i < bag.length; i+= 1) {
-   total += bag[i].price * bag[i].qty    
-  }
+
+  
+  
+
 
  
 
-// this code is to loop through every decrease button
-  for (let i = 0; i < decreaseBtn.length; i+= 1) {
-     decreaseBtn[i].addEventListener('click', function(){
-      let total = 0
-      const productOutput = document.querySelectorAll('.card-output')[i]
-      let quantityOutput  = Number(productOutput.innerText) - 1
-
-      if (quantityOutput < 0) {
-        quantityOutput = 0
-      }
-
-      productOutput.innerText = quantityOutput
-
-      document.getElementById('bag-output').textContent = quantityOutput
-    })
-  }
-
- 
-// this code is to loop through each increase button
-  for (let i = 0; i < increaseBtn.length; i+= 1) {
-
-    increaseBtn[i].addEventListener('click', function(){
-      const productOutput = document.querySelectorAll('.card-output')[i]
-      let quantityOutput = Number(productOutput.innerText) + 1
-
-      if (quantityOutput > bag[i].qty ++ ) {
-        quantityOutput = bag[i].qty ++
-      }
-
-      productOutput.innerText = quantityOutput
-      document.getElementById('bag-output').textContent = quantityOutput
-
-     
-    })
-  }
 
   for (let i = 0; i < bag.length; i+= 1) {
-
    
     priceContent.innerHTML = ''
     
@@ -167,11 +171,34 @@ function updateBag() {
     totalContent.append(subContent, shipContent, fullContent)
     priceContent.appendChild(totalContent)
    }
-
-  
-
     priceContent.style.display = 'block'
 }
+
+
+
+// this function removes a product from the bag 
+function removeProductFromBag() { 
+    const decreaseBtn = document.querySelectorAll('.decrease-btn');
+
+  // this code is to loop through every decrease button
+    for (let i = 0; i < decreaseBtn.length; i+= 1) {
+       decreaseBtn[i].addEventListener('click', function(){
+        const productOutput = document.querySelectorAll('.card-output')[i]
+        let quantityOutput  = Number(productOutput.innerText) - 1
+
+      if (quantityOutput = bag[i].qty -- ) {
+        quantityOutput = bag[i].qty 
+      }
+
+        productOutput.innerText = quantityOutput
+
+        document.getElementById('bag-output').textContent = quantityOutput
+      updateBag()
+    })
+  }
+  updateBag()
+}
+
 
 
 
@@ -196,9 +223,12 @@ for (let i = 0; i < productBtn.length; i+= 1) {
     const price = productBtn[i].dataset.price
     sendProductToBag(name, price, cardImg)
     addProduct()
-    // updateBag()
+    removeProductFromBag()
   })
 }
+
+ 
+
 
 
 
@@ -207,3 +237,28 @@ for (let i = 0; i < productBtn.length; i+= 1) {
 bagBtn.addEventListener('click', function(){
   displayBag()
 })
+
+
+
+
+
+
+
+
+
+//  
+
+
+
+
+
+
+  //   let total = 0
+  
+
+  
+
+  //  for (let i = 0; i < bag.length; i+= 1) {
+  //  total += bag[i].price * bag[i].qty    
+  // }
+
