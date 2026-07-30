@@ -103,7 +103,7 @@ function addProduct() {
 
 
 // this function code is for when the bag is being updated
-function updateBag() {
+  function updateBag() {
 
     let total = 0
 
@@ -120,62 +120,63 @@ function updateBag() {
     priceContent.innerHTML = ''
     
     // this code is creates the content of the sub total price
-    const totalContent = document.createElement('div');
-    totalContent.classList.add('bag-price-content');
+      const totalContent = document.createElement('div');
+      totalContent.classList.add('bag-price-content');
 
-    const subContent = document.createElement('div');
-    subContent.classList.add('sub-text-container');
+      const subContent = document.createElement('div');
+      subContent.classList.add('sub-text-container');
 
-    const subTotalPrice = document.createElement('h4');
-    subTotalPrice.textContent = 'sub Total'
+      const subTotalPrice = document.createElement('h4');
+      subTotalPrice.textContent = 'sub Total'
 
-    const subPrice = document.createElement('p');
-    subPrice.textContent = `$${bag[i].price} x ${bag[i].qty}`
+      const subPrice = document.createElement('p');
+      subPrice.textContent = `$${bag[i].price} x ${bag[i].qty}`
 
 
 
     // this code creates the shipping content for shipping text
-    const shipContent = document.createElement('div');
-    shipContent.classList.add('shipping-content');
+      const shipContent = document.createElement('div');
+      shipContent.classList.add('shipping-content');
 
-    const priceHd = document.createElement('h4');
-    priceHd.textContent = 'delivery'
+      const priceHd = document.createElement('h4');
+      priceHd.textContent = 'delivery'
 
-    const shipText = document.createElement('p');
-    shipText.textContent = 'Free'
-    
+      const shipText = document.createElement('p');
+      shipText.textContent = 'Free'
+      
 
   
     // these codes create the total container for the total text
-    const fullContent = document.createElement('div');
-    fullContent.classList.add('total-container');
+      const fullContent = document.createElement('div');
+      fullContent.classList.add('total-container');
 
-    const totalPriceHd = document.createElement('h4');
-    totalPriceHd.textContent = 'Total'
+      const totalPriceHd = document.createElement('h4');
+      totalPriceHd.textContent = 'Total'
 
-    const priceTotal = document.createElement('p');
-    priceTotal.innerHTML = `$${total}`
+      const priceTotal = document.createElement('p');
+      priceTotal.innerHTML = `$${total}`
 
 
 
     // these code displays the price content inside the price container
-    fullContent.append(totalPriceHd, priceTotal)
-    shipContent.append(priceHd, shipText)
-    subContent.append(subTotalPrice, subPrice)
-    totalContent.append(subContent, shipContent, fullContent)
-    priceContent.appendChild(totalContent)
+      fullContent.append(totalPriceHd, priceTotal)
+      shipContent.append(priceHd, shipText)
+      subContent.append(subTotalPrice, subPrice)
+      totalContent.append(subContent, shipContent, fullContent)
+      priceContent.appendChild(totalContent)
    }
 
+
     // this code hides an displays the price container and the bag text placeholder
-    if (total === 0) {
-      priceContent.style.display = 'none'
-      bagTextPlaceholder.style.display = 'block'
-      bagTextPlaceholder.style.display = 'flex'
-    } else {
-      bagTextPlaceholder.style.display = 'none'
-      
-      priceContent.style.display = 'block'
-    }
+      if (total === 0) {
+        priceContent.style.display = 'none'
+        bagTextPlaceholder.style.display = 'block'
+        bagTextPlaceholder.style.display = 'flex'
+      } else {
+        bagTextPlaceholder.style.display = 'none'
+        
+        priceContent.style.display = 'block'
+      }
    
   
 
@@ -193,16 +194,16 @@ function removeProductFromBag() {
         const productOutput = document.querySelectorAll('.card-output')[i]
         let quantityOutput  = Number(productOutput.innerText) - 1
 
+
     // this code is for when the user wants to remove a product quantity
-      if (quantityOutput = bag[i].qty -- ) {
+      if (quantityOutput = bag[i].qty --) {
         quantityOutput = bag[i].qty 
       }
 
-
+     // these codes display the quantity to the bag counter and the product counter
         productOutput.innerText = quantityOutput
 
         document.getElementById('bag-output').textContent = quantityOutput
-
         
       updateBag()
     })
