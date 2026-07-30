@@ -3,6 +3,7 @@ const bagOffScreen = document.querySelector('.shopping-section');
 const productBtn = document.querySelectorAll('.item-btn');
 const bagContainer = document.querySelector('.cart-content')
 const priceContent = document.querySelector('.bag-price-container')
+const bagTextPlaceholder = document.querySelector('.bag-placeholder-content');
 
 
 
@@ -164,11 +165,17 @@ function updateBag() {
     totalContent.append(subContent, shipContent, fullContent)
     priceContent.appendChild(totalContent)
    }
-   if (total === 0) {
-    priceContent.style.display = 'none'
-   } else {
-    priceContent.style.display = 'block'
-   }
+
+    // this code hides an displays the price container and the bag text placeholder
+    if (total === 0) {
+      priceContent.style.display = 'none'
+      bagTextPlaceholder.style.display = 'block'
+      bagTextPlaceholder.style.display = 'flex'
+    } else {
+      bagTextPlaceholder.style.display = 'none'
+      
+      priceContent.style.display = 'block'
+    }
    
   
 

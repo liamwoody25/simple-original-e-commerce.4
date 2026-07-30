@@ -141,6 +141,17 @@ header {
   right: 0;
 }
 
+.bag-placeholder-content {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 200px;
+}
+
+.bag-placeholder-content > p {
+  color: #003049;
+}
+
 
 .bag-price-container {
   padding: 20px;
