@@ -62,6 +62,7 @@ function addProduct() {
             <span class="card-output">${bag[i].qty}</span>
             <button aria-lable="increase-btn" class="increase-btn"><i class="bi bi-plus-square"></i></button>
           </div>
+          <button aria-label="remove-btn" class="remove-btn" ><i class="bi bi-trash"></i></button>
         </div>
       </article>
     `
@@ -96,7 +97,6 @@ function addProduct() {
   }
    
  updateBag()
-  
 }
 
 
@@ -104,8 +104,8 @@ function addProduct() {
 
 // this function code is for when the bag is being updated
   function updateBag() {
-
     let total = 0
+
 
     for (let i = 0; i < bag.length; i+= 1) {
     total += bag[i].price * bag[i].qty
@@ -187,6 +187,7 @@ function addProduct() {
 // this function removes a product from the bag 
 function removeProductFromBag() { 
     const decreaseBtn = document.querySelectorAll('.decrease-btn');
+    const removeBtn = document.querySelectorAll('.bi-trash');
 
   // this code is to loop through every decrease button
     for (let i = 0; i < decreaseBtn.length; i+= 1) {
@@ -200,13 +201,32 @@ function removeProductFromBag() {
         quantityOutput = bag[i].qty 
       }
 
+      
+      if (bag[i].qty === 0) {
+        bag.splice(i , 1)
+      }
+    
      // these codes display the quantity to the bag counter and the product counter
-        productOutput.innerText = quantityOutput
-
-        document.getElementById('bag-output').textContent = quantityOutput
+      productOutput.innerText = quantityOutput
+      document.getElementById('bag-output').textContent = quantityOutput
         
       updateBag()
     })
+
+
+    // this code loops through each remove button and removes it from the bag
+    for (let i = 0; i < removeBtn.length; i+= 1){
+      removeBtn[i].addEventListener('click', function(){
+        
+        if (bag[i].qty <= 0) {
+          bag.splice(i , 1)
+         console.log(i) 
+        }
+        addProduct()
+      })
+    }
+  
+
   }
   updateBag()
 }

@@ -74,7 +74,8 @@ p {
 }
 
 .decrease-btn,
-.increase-btn {
+.increase-btn,
+.remove-btn {
   background-color: transparent;
   border: none;
 }
@@ -82,6 +83,11 @@ p {
 .bi-dash-square,
 .bi-plus-square {
   color: #fff;
+}
+
+.bi-trash {
+  color: #fff;
+  font-size: 15px;
 }
 
 
