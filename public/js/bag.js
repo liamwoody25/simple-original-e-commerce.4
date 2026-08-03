@@ -202,9 +202,7 @@ function removeProductFromBag() {
       }
 
       
-      if (bag[i].qty === 0) {
-        bag.splice(i , 1)
-      }
+  
     
      // these codes display the quantity to the bag counter and the product counter
       productOutput.innerText = quantityOutput
@@ -218,7 +216,7 @@ function removeProductFromBag() {
     for (let i = 0; i < removeBtn.length; i+= 1){
       removeBtn[i].addEventListener('click', function(){
         
-        if (bag[i].qty <= 0) {
+        if (bag[i].qty === 0) {
           bag.splice(i , 1)
          console.log(i) 
         }
