@@ -95,7 +95,7 @@ function addProduct() {
     })
    
   }
-   
+removeProductFromBag()
  updateBag()
 }
 
@@ -167,7 +167,7 @@ function addProduct() {
    }
 
 
-    // this code hides an displays the price container and the bag text placeholder
+    // this code hides and displays the price container and the bag text placeholder
       if (total === 0) {
         priceContent.style.display = 'none'
         bagTextPlaceholder.style.display = 'block'
@@ -189,42 +189,37 @@ function removeProductFromBag() {
     const decreaseBtn = document.querySelectorAll('.decrease-btn');
     const removeBtn = document.querySelectorAll('.bi-trash');
 
-  // this code is to loop through every decrease button
-    for (let i = 0; i < decreaseBtn.length; i+= 1) {
-       decreaseBtn[i].addEventListener('click', function(){
-        const productOutput = document.querySelectorAll('.card-output')[i]
-        let quantityOutput  = Number(productOutput.innerText) - 1
+ // this code is to loop through every decrease button
+  for (let i = 0; i < decreaseBtn.length; i+= 1) {
+    decreaseBtn[i].addEventListener('click', function(){
+      const productOutput = document.querySelectorAll('.card-output')[i]
+      let quantityOutput  = Number(productOutput.innerText) - 1
 
 
     // this code is for when the user wants to remove a product quantity
       if (quantityOutput = bag[i].qty --) {
         quantityOutput = bag[i].qty 
       }
-
       
   
     
      // these codes display the quantity to the bag counter and the product counter
       productOutput.innerText = quantityOutput
       document.getElementById('bag-output').textContent = quantityOutput
-        
+
       updateBag()
     })
 
 
-    // this code loops through each remove button and removes it from the bag
+  // this code loops through each remove button and removes it from the bag
     for (let i = 0; i < removeBtn.length; i+= 1){
       removeBtn[i].addEventListener('click', function(){
-        
         if (bag[i].qty === 0) {
           bag.splice(i , 1)
-         console.log(i) 
         }
-        addProduct()
+          addProduct()
       })
     }
-  
-
   }
   updateBag()
 }
