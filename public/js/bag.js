@@ -214,7 +214,7 @@ function removeProductFromBag() {
   // this code loops through each remove button and removes it from the bag
     for (let i = 0; i < removeBtn.length; i+= 1){
       removeBtn[i].addEventListener('click', function(){
-        if (bag[i].qty === 0) {
+        if (bag[i].qty <= 0) {
           bag.splice(i , 1)
         }
           addProduct()
