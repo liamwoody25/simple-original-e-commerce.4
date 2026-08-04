@@ -196,8 +196,8 @@ function removeProductFromBag() {
       let quantityOutput  = Number(productOutput.innerText) - 1
 
 
-    // this code is for when the user wants to remove a product quantity
-      if (quantityOutput = bag[i].qty --) {
+  // this code is for when the user wants to remove a product quantity
+    if (quantityOutput = bag[i].qty --) {
         quantityOutput = bag[i].qty 
       }
       
