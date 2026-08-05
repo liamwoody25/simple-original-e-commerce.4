@@ -35,7 +35,24 @@
 
 
 
-  <!---- product-cards ---->
+  <!----- main section ----->
+    <main>
+
+  <!----- hero section ----->
+    <section id="hero-section">
+      <div class="hero-content">
+        <h2>One stop shop to buy Your tech</h2>
+        <button class="hero-btn">Shop Now</button>
+      </div>
+      <img class="hero-img" src="./public/assets/images/vista-wei-lzePW7ESwts-unsplash.jpg" alt="image of laptop and smartphone">
+    </section>
+   <!----- hero section ----->
+
+
+
+  <!---- product section ---->
+    <section id="Tech-products">
+      <h2 class="tech-title">Popular Tech</h2>
     <div class="product-cards">
 
 
@@ -44,7 +61,7 @@
       <article class="product-card">
         <div class="product-card-content">
             <img class="card-image" src="./public/assets/images/pexels-dlxmedia-hu-maccbook.png" alt="image of laptop">
-          <div class="card-text-content">
+          <div class="product-text-content">
             <h3>Macbook</h3>
             <p>$899</p>
           </div>
@@ -61,7 +78,7 @@
       <article class="product-card">
         <div class="product-card-content">
             <img class="card-image" src="./public/assets/images/andrey-matveev-msartwatch-unsplash.png" alt="image of smartwatch">
-          <div class="card-text-content">
+          <div class="product-text-content">
             <h3>Android</h3>
             <p>$399</p>
           </div>
@@ -78,7 +95,7 @@
       <article class="product-card">
         <div class="product-card-content">
             <img class="card-image" src="./public/assets/images/amanz-FT-iphone-unsplash.png" alt="image of smartphone">
-          <div class="card-text-content">
+          <div class="product-text-content">
             <h3>Iphone</h3>
             <p>$699</p>
           </div>
@@ -95,7 +112,7 @@
       <article class="product-card">
         <div class="product-card-content">
             <img class="card-image" src="./public/assets/images/pexels-cottonbro-headphones-jpg.jpg" alt="image of headphones">
-          <div class="card-text-content">
+          <div class="product-text-content">
             <h3>Headset</h3>
             <p>$250</p>
           </div>
@@ -112,7 +129,7 @@
       <article class="product-card">
         <div class="product-card-content">
             <img class="card-image" src="./public/assets/images/pexels-joshsorenson-tablet.png" alt="image of tablet">
-          <div class="card-text-content">
+          <div class="product-text-content">
             <h3>Ipad</h3>
             <p>$499</p>
           </div>
@@ -129,7 +146,7 @@
       <article class="product-card">
         <div class="product-card-content">
             <img class="card-image" src="./public/assets/images/andrew-hutchings-camera-unsplash.png" alt="image of camera">
-          <div class="card-text-content">
+          <div class="product-text-content">
             <h3>Canon</h3>
             <p>$800</p>
           </div>
@@ -138,11 +155,53 @@
           </div>
         </div>
       </article>
-
-
-    
     </div>
+        </section>
+      <!---- product section ---->
 
+
+      <!---- deals section ---->
+        <section id="deals">
+            <h2 class="deals-title">Todays Deals</h2>
+          <div class="deal-cards">
+
+
+          <!-- deals-card-1 -->
+            <article class="card">
+              <div class="card-content">
+                  <img class="card-image" src="./public/assets/images/pexels-joshsorenson-tablet.png" alt="image of tablet">
+                <div class="card-text-content">
+                  <h3>Ipad</h3>
+                  <p>$350</p>
+                </div>
+                <div class="btn-content">
+                    <button aria-label="deal-btn" class="deal-btn" data-name="Ipad" data-price="350">Add To Bag</button>
+                </div>
+              </div>
+            </article>
+          <!-- deals-card-1 -->
+
+
+
+
+          <!-- deals-card-2 -->
+           <article class="card">
+            <div class="card-content">
+                <img class="card-image" src="./public/assets/images/amanz-FT-iphone-unsplash.png" alt="image of smartphone">
+              <div class="card-text-content">
+                <h3>Iphone</h3>
+                <p>$545</p>
+              </div>
+              <div class="btn-content">
+                <button aria-label="deal-btn" class="deal-btn" data-name="Iphone" data-price="545">Add To Bag</button>
+              </div>
+            </div>
+           </article>
+
+          
+          </div>
+        </section>
+      </main>
     </div>
   <script src="./public/js/bag.js"></script>
 </body>

@@ -1,6 +1,7 @@
 const bagBtn = document.querySelector('.bi-bag')
 const bagOffScreen = document.querySelector('.shopping-section');
 const productBtn = document.querySelectorAll('.item-btn');
+const itemBtn = document.querySelectorAll('.deal-btn');
 const bagContainer = document.querySelector('.cart-content')
 const priceContent = document.querySelector('.bag-price-container')
 const bagTextPlaceholder = document.querySelector('.bag-placeholder-content');
@@ -249,6 +250,16 @@ for (let i = 0; i < productBtn.length; i+= 1) {
     sendProductToBag(name, price, cardImg)
     addProduct()
     removeProductFromBag()
+  })
+}
+
+for (let i = 0; i < itemBtn.length; i+= 1) {
+  itemBtn[i].addEventListener('click', function(){
+    const cardImg = document.querySelectorAll('.card-image')[i].src
+    const name = itemBtn[i].dataset.name
+    const price = itemBtn[i].dataset.price
+    sendProductToBag(name, price, cardImg)
+    addProduct()
   })
 }
 
