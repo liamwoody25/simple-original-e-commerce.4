@@ -420,6 +420,62 @@ header {
   background-color: #edede9;
 }
 
+/**** deals section ****/
+
+
+
+
+
+
+/**** media queries tablet ****/
+
+@media screen and (min-width:768px) {
+
+  /*** components ***/
+
+
+  /**** bag btn ****/
+
+  .bag-btn {
+    width: 33px;
+    height: 29px;
+    margin: 0;
+  }
+
+  .bi-bag {
+    position: relative;
+  }
+
+  .input {
+    position: relative;
+    left: 2px;
+    bottom: 23px;
+  }
+
+  /**** bag btn ****/
+
+
+  
+  /*** components ***/
+  
+  /**** body ****/
+
+  .container {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  /**** body ****/
+
+
+
+  /**** header ****/
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 
 
