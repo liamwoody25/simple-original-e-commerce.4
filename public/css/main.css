@@ -6,7 +6,7 @@
 
 
 h1 {
-  font-family: 'Cascadia Mono' sans-serif;
+  font-family: 'Cascadia Mono' , sans-serif;
   font-size: 32px;
   color: #274c77;
   margin: 0;
@@ -39,6 +39,12 @@ p {
 
 /***** components *****/
 
+#link {
+  display: flex;
+  text-decoration: none;
+  gap: 10px;
+  color: #274c77;
+}
 
 /**** bag btn ****/
 
@@ -60,6 +66,53 @@ p {
 
 /**** bag btn ****/
 
+
+
+/**** hamburger menu ****/
+
+.ham-burger {
+  width: 43px;
+  height: 34px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.burger-bar {
+  width: 9%;
+  background-color: #98c1d9;
+  height: 6px;
+  top: 13px;
+  position: absolute;
+  border-radius: 15px;
+  transform: translate(15%, -50%);
+  transition-property: transform, opacity, top;
+  transition: .9s;
+}
+
+.bar-center {
+  top: 22px;
+}
+
+.bar-bottom {
+  top: 32px;
+}
+
+.ham-burger.enable .bar-top {
+  transform: translate(10%, 2%) rotate(-315deg);
+  top: 21px;
+}
+
+.ham-burger.enable .bar-center {
+  opacity: 0;
+}
+
+.ham-burger.enable .bar-bottom {
+  transform: translate(13%, 80%) rotate(-225deg);
+  top: 16px;
+}
+
+
 /* hero btn */
 
 .hero-btn {
@@ -73,6 +126,8 @@ p {
 
 /* hero btn */
 
+
+
 /*** deal-btn ***/
 
 .deal-btn {
@@ -84,6 +139,8 @@ p {
 
 .item-btn {
   padding: 7px 10px;
+  border-radius: 5px;
+  border: none;
   box-shadow: 0 1px 6px -4px black;
 }
 
@@ -140,6 +197,18 @@ header {
   align-items: baseline;
   position: relative;
   z-index: 3;
+}
+
+.header-bar {
+  position: absolute;
+  top: 47px;
+  display: none;
+  left: 0;
+  justify-content: space-evenly;
+  background-color: #98c1d9;
+  width: 95%;
+  flex-direction: row;
+  padding: 10px;
 }
 
 /**** header ****/
@@ -284,6 +353,7 @@ header {
   position: relative;
   bottom: -18px;
   border-radius: 15px;  
+  margin-top: 15px;
 }
 
 .hero-content {
@@ -333,7 +403,7 @@ header {
   width: 80%;
   box-shadow: 0 6px 14px -8px black;
   border-radius: 10px;
-  background-color: #669bbc;
+  background-color: slategrey;
 }
 
 .product-card-content {
@@ -351,10 +421,12 @@ header {
 .product-text-content > h3 {
   margin-top: 2px;
   margin-bottom: 0;
+  color: #fff;
 }
 
 .product-text-content > p {
   margin: 7px 0 7px;
+  color: #FFFFFF;
 }
 
 .card-image {
@@ -433,6 +505,9 @@ header {
 
   /*** components ***/
 
+  .ham-burger {
+    display: none;
+  }
 
   /**** bag btn ****/
 
@@ -455,7 +530,7 @@ header {
   /**** bag btn ****/
 
 
-  
+
   /*** components ***/
   
   /**** body ****/
@@ -475,6 +550,43 @@ header {
     display: flex;
     justify-content: space-between;
   }
+
+  .header-bar {
+    position: static;
+    display: block;
+    background-color: transparent;
+    display: flex;
+  }
+
+  /**** header ****/
+
+
+
+  /**** hero section ****/
+
+  #hero-section {
+    margin-top: 20px;
+  }
+
+  /**** hero section ****/
+
+
+
+  /**** products section ****/
+
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+
 }
 
 

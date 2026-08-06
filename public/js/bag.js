@@ -1,5 +1,7 @@
 const bagBtn = document.querySelector('.bi-bag')
+const burgerToggle = document.querySelector('.ham-burger');
 const bagOffScreen = document.querySelector('.shopping-section');
+const menuDropDown = document.querySelector('.header-bar');
 const productBtn = document.querySelectorAll('.item-btn');
 const itemBtn = document.querySelectorAll('.deal-btn');
 const bagContainer = document.querySelector('.cart-content')
@@ -239,6 +241,16 @@ function displayBag() {
 }
 
 
+function hamBurgerMenu() {
+  if (burgerToggle.classList.toggle('enable')) {
+    menuDropDown.style.display = 'flex'
+    menuDropDown.style.display = 'block'
+  } else {
+    menuDropDown.style.display = 'none'
+  }
+}
+
+
 
 // this code is for when the add to bag button is clicked
 for (let i = 0; i < productBtn.length; i+= 1) {
@@ -274,14 +286,13 @@ bagBtn.addEventListener('click', function(){
 })
 
 
+// this event listener is to listener for when the user clicks on the hamburger menu
+burgerToggle.addEventListener('click', function(){
+  hamBurgerMenu()
+})
 
 
 
-
-
-
-
-//  
 
 
 
