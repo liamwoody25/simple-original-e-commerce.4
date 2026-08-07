@@ -532,7 +532,12 @@ header {
     display: none;
   }
 
+  #link {
+   
+  }
+
   /**** bag btn ****/
+  
 
   .bag-btn {
     width: 33px;
@@ -579,6 +584,8 @@ header {
     display: block;
     background-color: transparent;
     display: flex;
+    gap: 30px;
+    justify-content: end;
   }
 
   /**** header ****/
@@ -607,8 +614,15 @@ header {
 
   .product-card {
     display: flex;
-    flex-direction: column;
     width: 45%;
+  }
+
+  .product-card-content {
+    display: flex;
+  }
+
+  .product-text-content > p {
+    margin: 0;
   }
 
   /**** products section ****/
@@ -645,6 +659,12 @@ header {
 
   /**** components ****/
 
+   #link {
+    display: flex;
+   
+
+  }
+
   .hero-btn {
     width: 150px;
   }
@@ -670,7 +690,8 @@ header {
 
   .header-bar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: end;
+     gap: 30px;
   }
 
   /**** header ****/
