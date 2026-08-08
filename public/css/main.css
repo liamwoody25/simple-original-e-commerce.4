@@ -146,7 +146,7 @@ p {
 
 .deal-btn {
   padding: 7px 10px;
-  box-shadow: 0 1px 6px -4px black;
+  box-shadow: 0 1px 6px -4px #000000;
 }
 
 /**** product btn content ****/
@@ -532,10 +532,6 @@ header {
     display: none;
   }
 
-  #link {
-   
-  }
-
   /**** bag btn ****/
   
 
@@ -598,6 +594,10 @@ header {
     margin-top: 20px;
   }
 
+  .hero-img {
+    height: 362px;
+  }
+
   /**** hero section ****/
 
 
@@ -644,6 +644,10 @@ header {
     width: 40%;
   }
 
+  .card-image {
+    height: 200px;
+  }
+
   /**** deals section ****/
 }
 
@@ -668,6 +672,21 @@ header {
   .hero-btn {
     width: 150px;
   }
+
+  .deal-btn {
+    border-radius: 5px;
+    border: none;
+    transition: 0.8;
+    transition-duration: .5s;
+    cursor: pointer;
+  }
+  
+
+  .deal-btn:hover {
+    transform: scale(1.1);
+  }
+
+  
   
   /**** body ****/
 
@@ -678,6 +697,7 @@ header {
   }
 
   /**** body ****/
+
 
 
 
@@ -705,6 +725,10 @@ header {
     width: 50%;
   }
 
+  .hero-img {
+    height: 362px;
+  }
+
   /**** hero seection ****/
 
 
@@ -729,7 +753,11 @@ header {
   /**** deals section ****/
 
   .card {
-    width: 35%;
+    width: 33%;
+  }
+
+  .card-image {
+    height: 256px;
   }
 
 
