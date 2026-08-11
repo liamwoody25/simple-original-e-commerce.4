@@ -59,8 +59,10 @@ p {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: 0.9;
-  transition: .8s;
+  transition: transform;
+  transition-duration: .8s;
+  width: 33px;
+  height: 27px;
 }
 
 .bag-btn:hover {
@@ -69,13 +71,16 @@ p {
 
 .bi-bag {
   font-size: 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .input {
-  font-size: 13px;
+  font-size: 12px;
   position: relative;
-  right: 19px;
-  bottom: 1px;
+  left: 2px;
+  bottom: 23px;
+  
 }
 
 /**** bag btn ****/
@@ -426,7 +431,7 @@ header {
   width: 80%;
   box-shadow: 0 6px 14px -8px black;
   border-radius: 10px;
-  background-color: slategrey;
+  background-color: #dee2e6;
 }
 
 .product-card-content {
@@ -449,7 +454,7 @@ header {
 
 .product-text-content > p {
   margin: 7px 0 7px;
-  color: #FFFFFF;
+  color: #292929;
 }
 
 .card-image {
@@ -519,6 +524,56 @@ header {
 
 
 
+/**** footer section ****/
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-title {
+  text-decoration: none;
+}
+
+.column-title {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #d3d3d3;
+  padding: 50px;
+  margin-top: 50px;
+
+}
+
+.footer-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.footer-items ul {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.footer-bottom-right > p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold
+}
+
+/**** footer section ****/
+
+
+
+
 
 
 
@@ -536,6 +591,8 @@ header {
   
 
   .bag-btn {
+    position: relative;
+    top: 3px;
     width: 33px;
     height: 29px;
     margin: 0;
@@ -543,12 +600,13 @@ header {
 
   .bi-bag {
     position: relative;
+    bottom: 3px;
   }
 
   .input {
     position: relative;
     left: 2px;
-    bottom: 23px;
+    bottom: 26px;
   }
 
   /**** bag btn ****/
@@ -617,6 +675,12 @@ header {
     width: 45%;
   }
 
+  .card-image {
+    width: 100%;
+    height: 75%;
+  }
+
+
   .product-card-content {
     display: flex;
   }
@@ -644,15 +708,33 @@ header {
     width: 40%;
   }
 
-  .card-image {
-    height: 200px;
+  /**** deals section ****/
+
+
+  /**** footer section ****/
+
+    footer {
+      padding: 50px 23px;
+    }
+
+  .footer-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
-  /**** deals section ****/
+  .footer-bottom-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  /**** footer section ****/
 }
 
-
 /**** media queries tablet ****/
+
+
 
 
 
@@ -685,6 +767,8 @@ header {
   .deal-btn:hover {
     transform: scale(1.1);
   }
+
+  /**** components ****/
 
   
   
@@ -757,8 +841,27 @@ header {
   }
 
   .card-image {
-    height: 256px;
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
   }
+
+   /**** deals section ****/
+
+
+
+
+  /**** footer section ****/
+
+    .footer-items {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .footer-bottom-right {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
 
 }
