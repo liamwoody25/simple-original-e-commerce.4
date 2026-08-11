@@ -573,7 +573,8 @@ footer {
 .footer-bottom-right > p {
   text-align: center;
   font-size: 14px;
-  font-weight: bold
+  font-weight: bold;
+  margin: 0;
 }
 
 /**** footer section ****/
@@ -731,7 +732,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
-    margin-bottom: 13px;
+    margin-bottom: 25px;
   }
 
   .footer-bottom-right {
