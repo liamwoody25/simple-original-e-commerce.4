@@ -261,7 +261,7 @@ header {
   width: 373px;
   height: 685px;
   transition-property: right;
-  background-color: grey;
+  background-color: #d3d3d3;
   transition-timing-function: ease-in-out;
   transition-duration: .9s;
   z-index: 3;
@@ -620,9 +620,16 @@ footer {
   /**** bag btn ****/
 
 
+  /** hero-button **/
 
-  /*** components ***/
+  .hero-btn {
+    width: 25%;
+  }
+
+  /**** components ****/
   
+
+
   /**** body ****/
 
   .container {
@@ -662,6 +669,7 @@ footer {
 
   .hero-img {
     height: 362px;
+    object-fit: cover;
   }
 
   /**** hero section ****/
