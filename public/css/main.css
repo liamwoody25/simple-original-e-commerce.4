@@ -209,7 +209,7 @@ p {
 
 .container {
   margin: 0 auto;
-  width: 92%;
+  width: 97%;
 }
 
 /**** body ****/
@@ -428,7 +428,7 @@ header {
 }
 
 .product-card {
-  width: 80%;
+  width: 90%;
   box-shadow: 0 6px 14px -8px black;
   border-radius: 10px;
   background-color: #dee2e6;
@@ -491,7 +491,7 @@ header {
 }
 
 .card {
-  width: 80%;
+  width: 90%;
   box-shadow: 0 6px 14px -8px black;
   border-radius: 10px;
   background-color: #fffcf2;
@@ -862,7 +862,7 @@ footer {
   .card-image {
     object-fit: cover;
     width: 100%;
-    height: 80%;
+    height: 76%;
   }
 
    /**** deals section ****/
