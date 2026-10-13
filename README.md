@@ -4,6 +4,9 @@
 I built this simple e-commerce project where the user can choose a product of their 
 choice from the most popular tech or they can view the latest deal.
 
+
+---
+
 ### Technologies:
 Html5 semantics, Css3 styling, JavaScript (es6+)
 
@@ -18,4 +21,5 @@ Html5 semantics, Css3 styling, JavaScript (es6+)
 I built this project to practice using JavaScript Arrays and Objects from what I've learned. I also about HTML custom data attributes and how they work, and also how JavaScript accesses the data that is set from html.
 
 I also wanted to improve my understanding using the event listener and how it works with the product buttons when they are clicked. I also wanted to improve my understanding when using the DOM and how it works with the HTML elements to practice using the template literals.
+
 
