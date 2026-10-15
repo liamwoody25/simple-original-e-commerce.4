@@ -13,10 +13,10 @@ choice from the most popular tech or they can view the latest deal.
 + JavaScript (es6+)
 
 ### Features:
-+ added the cart icon that opens the hidden shopping bag to store the products when the product is clicked on.
-+ made the product buttons transition when the user hovers over the product button.
-+ I included a product quantity controls so users can add or remove products from the shopping bag
-+ I added the hamburger menu to display the navigation links
++ **shopping bag** added the cart icon that opens the hidden shopping bag to store the products when the product is clicked on.
++ **button interaction** made the product buttons transition when the user hovers over the product button.
++ **bag Controls** I included a product quantity controls so users can add or remove products from the shopping bag
++ **navigation menu** I added the hamburger menu to display the navigation links
 
 ### What I've Learned
 
