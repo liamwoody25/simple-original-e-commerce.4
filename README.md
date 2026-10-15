@@ -22,4 +22,4 @@ I built this project to practice using JavaScript Arrays and Objects from what I
 
 I also wanted to improve my understanding using the event listener and how it works with the product buttons when they are clicked. I also wanted to improve my understanding when using the DOM and how it works with the HTML elements to practice using the template literals.
 
-
+link:https://liamwoody25.github.io/simple-original-e-commerce.4/
