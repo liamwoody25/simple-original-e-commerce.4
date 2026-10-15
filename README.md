@@ -7,7 +7,7 @@ choice from the most popular tech or they can view the latest deal.
 
 ---
 
-### Technologies:
+### Built with:
 + Semantic Html5, 
 + Css3 styling, 
 + JavaScript (es6+)
