@@ -8,7 +8,9 @@ choice from the most popular tech or they can view the latest deal.
 ---
 
 ### Technologies:
-Semantic Html5, Css3 styling, JavaScript (es6+)
++ Semantic Html5, 
++ Css3 styling, 
++ JavaScript (es6+)
 
 ### Features:
 + added the cart icon that opens the hidden shopping bag to store the products when the product is clicked on.
