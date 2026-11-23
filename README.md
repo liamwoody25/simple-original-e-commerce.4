@@ -8,7 +8,7 @@ I built this simple e-commerce project where the user can choose a product of th
 ### Built with:
 + Semantic HTML5
 + CSS3 styling
-+ JavaScript (es6+)
++ JavaScript (ES6+)
 
 ### Features:
 + **Shopping Bag** added the cart icon that opens the hidden shopping bag to store the products when the product is clicked on.
