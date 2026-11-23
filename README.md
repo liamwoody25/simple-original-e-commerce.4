@@ -22,5 +22,10 @@ I built this project to practice using JavaScript Arrays and Objects from what I
 
 I also wanted to improve my understanding of using the event listener and how it works with the product buttons when they are clicked. I also wanted to improve my understanding of using the DOM and how it works with the HTML elements to practice using the template literals.
 
+### Preview 
+
+<img width="2785" height="1412" alt="Tektronics Project screenshot" src="https://github.com/user-attachments/assets/6cabdf27-c28c-4bb9-8dca-d7113e5ecec3" />
+
+
 **View link**: https://liamwoody25.github.io/simple-original-e-commerce.4/
 
