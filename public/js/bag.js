@@ -40,6 +40,7 @@ function sendProductToBag(name, price, image) {
     }
   
   bag.push(item)  
+  console.log(bag)
 
 }
 
@@ -47,7 +48,6 @@ function sendProductToBag(name, price, image) {
 
 function addProduct() {
  
-  
  
   let product = ''
 
@@ -101,6 +101,7 @@ function addProduct() {
 removeProductFromBag()
  updateBag()
 }
+
 
 
 

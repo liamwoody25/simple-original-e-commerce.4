@@ -432,6 +432,12 @@ header {
   box-shadow: 0 6px 14px -8px black;
   border-radius: 10px;
   background-color: #dee2e6;
+  transition-duration: .9s;
+  
+}
+
+.product-card:hover {
+  transform: scale(1.03);
 }
 
 .product-card-content {
@@ -461,6 +467,7 @@ header {
   width: 100%;
   border-radius: 10px 10px 0 0;
   background-color: #edede9;
+  
 }
 
 /**** product section ****/
@@ -495,6 +502,11 @@ header {
   box-shadow: 0 6px 14px -8px black;
   border-radius: 10px;
   background-color: #fffcf2;
+  transition: .9s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card-content {
