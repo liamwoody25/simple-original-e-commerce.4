@@ -139,8 +139,8 @@ p {
   border-radius: 9px;
   background-color: transparent;
   font-size: 14px;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #274c77;
+  border: 1px solid #274c77;
 }
 
 /* hero btn */
@@ -385,12 +385,20 @@ header {
 }
 
 .hero-content {
-  padding-left: 10px;
+  padding: 10px;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  bottom: 20px;
+  bottom: 4px;
+  opacity: 0.8;
   z-index: 2;
+  border-radius: 0 0 15px 15px;
+  background-image:linear-gradient(to top, #d3d3d3 );
+  
+}
+
+.hero-content > h2 {
+  margin: 5px;
 }
 
 .hero-img {
@@ -679,6 +687,13 @@ footer {
     margin-top: 20px;
   }
 
+  .hero-content {
+    position: absolute;
+    left: 120px;
+    width: 52%;
+    bottom: 102px;
+  }
+
   .hero-img {
     height: 362px;
     object-fit: cover;
@@ -706,6 +721,7 @@ footer {
   .card-image {
     width: 100%;
     height: 75%;
+    object-fit: cover;
   }
 
 
@@ -775,11 +791,16 @@ footer {
 @media screen and (min-width:1024px) {
 
   /**** components ****/
+   
+  h2 {
+    font-size: 32px;
+    
+  }
+
+  /**** components ****/
 
    #link {
     display: flex;
-   
-
   }
 
   .hero-btn {
@@ -794,7 +815,6 @@ footer {
     cursor: pointer;
   }
   
-
   .deal-btn:hover {
     transform: scale(1.1);
   }
@@ -835,15 +855,28 @@ footer {
 
   /**** hero seection ****/
 
+  #hero-section {
+    border-radius: 0;
+  }
+
   .hero-content {
+    padding: 50px;
     display: flex;
-    width: 50%;
+    width: 45%;
+    position: absolute;
+    left: 253px;
+    bottom: 64px;
+  }
+
+  .hero-content > h2 {
+    margin-bottom: 20px;
   }
 
   .hero-img {
+    object-fit: cover;
     height: 362px;
+    border-radius: 0;
   }
-
   /**** hero seection ****/
 
 
@@ -876,6 +909,8 @@ footer {
     width: 100%;
     height: 76%;
   }
+
+
 
    /**** deals section ****/
 
